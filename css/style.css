@@ -653,28 +653,43 @@ header {
 .cursos-vitrine {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 26px;
+    justify-content: flex-start;
+    gap: 32px;
     margin-top: 34px;
-    padding: 30px 10px 42px;
+    padding: 34px max(22px, calc((100vw - 1280px) / 2 + 22px)) 44px;
     overflow-x: auto;
     overflow-y: visible;
     scroll-snap-type: x proximity;
     scrollbar-width: thin;
+    scrollbar-color: rgba(29, 78, 216, 0.35) transparent;
+}
+
+.cursos-vitrine::-webkit-scrollbar {
+    height: 4px;
+}
+
+.cursos-vitrine::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cursos-vitrine::-webkit-scrollbar-thumb {
+    background: rgba(29, 78, 216, 0.35);
+    border-radius: 999px;
 }
 
 .curso-vitrine-card {
-    width: 214px;
-    min-width: 214px;
+    width: 252px;
+    min-width: 252px;
     aspect-ratio: 9 / 16;
-    border-radius: 16px;
+    border-radius: 26px;
     overflow: hidden;
     background-color: #ffffff;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
     scroll-snap-align: center;
     transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
     position: relative;
     display: block;
+    isolation: isolate;
 }
 
 .curso-vitrine-card img {
@@ -682,6 +697,7 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: inherit;
 }
 
 .curso-vitrine-card:hover,
@@ -1672,11 +1688,17 @@ th {
         display: none;
     }
 
-    .btn-acesso-mobile {
+    .menu .btn-acesso-mobile {
         display: flex;
         width: 80%;
         margin: 20px auto 0;
         justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        background-color: var(--azul-vivo);
+        border-bottom: 0;
+        border-radius: 6px;
+        font-weight: 700;
     }
 
     #botao-menu {
@@ -1829,7 +1851,7 @@ th {
         width: 78vw;
         min-width: 78vw;
         max-width: 330px;
-        border-radius: 16px;
+        border-radius: 22px;
     }
 
     .curso-vitrine-card:hover,
