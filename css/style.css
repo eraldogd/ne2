@@ -2005,37 +2005,33 @@ th {
     }
 
     .painel-cards {
-        grid-template-columns: repeat(2, minmax(130px, 1fr));
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 0 6px;
     }
 
     .curso-icone {
-        height: 64px;
+        height: 76px;
     }
 
     .curso-icone img {
-        width: 34px;
-        height: 34px;
+        width: 42px;
+        height: 42px;
     }
 
     .curso-conteudo {
-        padding: 18px 14px;
+        padding: 24px 24px 28px;
     }
 
     .curso-conteudo h3 {
-        font-size: 0.92rem;
+        font-size: 1.12rem;
     }
 
-    .curso-conteudo p,
-    .curso-conteudo small,
-    .badge {
-        display: none;
-    }
 
     .btn-curso {
         width: 100%;
-        padding: 9px 10px;
-        font-size: 0.68rem;
+        padding: 10px 12px;
+        font-size: 0.82rem;
     }
 
     .busca-form,
