@@ -263,10 +263,14 @@ a {
     line-height: 1.5;
 }
 
+.alerta-check {
+    display: none;
+}
+
 #alerta-topo {
     background-color: var(--azul-medio);
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 52px 10px 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,6 +279,41 @@ a {
     animation: alertaDesce 1.2s ease-out both;
     position: relative;
     z-index: 200;
+    max-height: 72px;
+    overflow: hidden;
+    transition: max-height 0.45s ease, padding 0.45s ease, opacity 0.35s ease, transform 0.45s ease;
+}
+
+.alerta-fechar {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.alerta-fechar:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    transform: translateY(-50%) scale(1.05);
+}
+
+#fechar-alerta:checked + #alerta-topo {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(-100%);
 }
 
 .aviso-prazo {
