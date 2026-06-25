@@ -6,7 +6,7 @@
     <title>Área do Aluno - Nossa Escola</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="painel-body">
+<body class="corpo-painel">
 
     <aside class="painel-lateral">
         <div class="painel-marca">
@@ -14,6 +14,9 @@
             <strong>Aluno</strong>
             <small>Gestão Educacional</small>
         </div>
+
+        <input type="checkbox" id="check-painel" class="painel-menu-check">
+        <label for="check-painel" class="painel-botao-menu"><span></span></label>
 
         <nav class="painel-menu">
             <a href="#" class="ativo">Painel Geral</a>
@@ -25,7 +28,7 @@
         <a href="login.html" class="painel-sair">Sair</a>
     </aside>
 
-    <main class="painel-main">
+    <main class="painel-principal painel-principal-aluno">
         <section class="painel-topo" id="resumo-aluno">
             <div>
                 <h1>Olá, Estudante!</h1>
@@ -36,23 +39,28 @@
         <section class="painel-indicadores">
             <div class="indicador">
                 <span>Selecionados</span>
-                <strong class="azul">0/4</strong>
+                <strong>0/4</strong>
+                <img class="indicador-icone" src="img/icon-card-selecionados.svg" alt="">
             </div>
             <div class="indicador">
                 <span>Matriculado</span>
-                <strong class="verde">0</strong>
+                <strong>0</strong>
+                <img class="indicador-icone" src="img/icon-card-matriculado.svg" alt="">
             </div>
             <div class="indicador">
                 <span>Pendentes</span>
-                <strong class="laranja">0</strong>
+                <strong>0</strong>
+                <img class="indicador-icone" src="img/icon-card-matriculado.svg" alt="">
             </div>
             <div class="indicador">
                 <span>Sua turma</span>
                 <strong>1B</strong>
+                <img class="indicador-icone" src="img/icon-card-turma.svg" alt="">
             </div>
             <div class="indicador">
                 <span>Sua média</span>
-                <strong class="roxo">8.5</strong>
+                <strong>8.5</strong>
+                <img class="indicador-icone" src="img/icon-card-media.svg" alt="">
             </div>
         </section>
 
@@ -63,60 +71,60 @@
                 <article class="curso-card">
                     <div class="curso-icone"><img src="img/icon-calculadora.svg" alt=""></div>
                     <div class="curso-conteudo">
-                        <span class="badge azul-bg">Exatas</span>
+                        <span class="etiqueta-categoria fundo-azul">Exatas</span>
                         <h3>Matemática Avançada</h3>
                         <p>Curso de matemática para alunos do ensino médio com foco em preparação para vestibulares.</p>
                         <small>Prof. Carlos Silva · 6 meses</small>
                         <small>Seg/Qua 14h-16h · 25 vagas</small>
-                        <a href="#" class="btn btn-primario btn-curso">Selecionar este curso</a>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
                     </div>
                 </article>
 
                 <article class="curso-card">
                     <div class="curso-icone"><img src="img/icon-livro.svg" alt=""></div>
                     <div class="curso-conteudo">
-                        <span class="badge laranja-bg">Humanas</span>
+                        <span class="etiqueta-categoria fundo-laranja">Humanas</span>
                         <h3>Português e Redação</h3>
                         <p>Aperfeiçoamento em língua portuguesa e técnicas de redação dissertativa.</p>
                         <small>Prof. Ana Santos · 6 meses</small>
                         <small>Ter/Qui 10h-12h · 30 vagas</small>
-                        <a href="#" class="btn btn-primario btn-curso">Selecionar este curso</a>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
                     </div>
                 </article>
 
                 <article class="curso-card">
                     <div class="curso-icone"><img src="img/icon-quimica.svg" alt=""></div>
                     <div class="curso-conteudo">
-                        <span class="badge azul-bg">Exatas</span>
+                        <span class="etiqueta-categoria fundo-azul">Exatas</span>
                         <h3>Química Experimental</h3>
                         <p>Curso prático de química com experimentos laboratoriais modernos e interativos.</p>
                         <small>Prof. Roberto Lima · 4 meses</small>
                         <small>Sex 14h-17h · 20 vagas</small>
-                        <a href="#" class="btn btn-primario btn-curso">Selecionar este curso</a>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
                     </div>
                 </article>
 
                 <article class="curso-card">
                     <div class="curso-icone"><img src="img/icon-historia.svg" alt=""></div>
                     <div class="curso-conteudo">
-                        <span class="badge laranja-bg">Humanas</span>
+                        <span class="etiqueta-categoria fundo-laranja">Humanas</span>
                         <h3>História do Brasil</h3>
                         <p>Estudo aprofundado da história brasileira do período colonial à atualidade.</p>
                         <small>Prof. Mariana Costa · 5 meses</small>
                         <small>Seg/Qua 10h-12h · 30 vagas</small>
-                        <a href="#" class="btn btn-primario btn-curso">Selecionar este curso</a>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
                     </div>
                 </article>
 
                 <article class="curso-card">
                     <div class="curso-icone"><img src="img/icon-web.svg" alt=""></div>
                     <div class="curso-conteudo">
-                        <span class="badge vermelho-bg">Tecnologia</span>
+                        <span class="etiqueta-categoria fundo-vermelho">Tecnologia</span>
                         <h3>Programação Web</h3>
                         <p>Introdução ao desenvolvimento web com HTML, CSS e JavaScript.</p>
                         <small>Prof. João Oliveira · 6 meses</small>
                         <small>Ter/Qui 14h-16h · 25 vagas</small>
-                        <a href="#" class="btn btn-primario btn-curso">Selecionar este curso</a>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
                     </div>
                 </article>
             </div>
